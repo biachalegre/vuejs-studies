@@ -1,15 +1,15 @@
-// Cria uma instância do Vue
-// Passa um objeto para o app para configurar diversas opções
+// Criação de uma instância da aplicação Vue
 const app = Vue.createApp({
+  // Definição do estado da aplicação (dados reativos)
   data() {
-    // Sempre retorna um objeto, que podem ser usados no HTML que é controlado pelo Vue
+    // Retorna um objeto que contém os dados que podem ser usados no template
     return {
-      // Key Values
+      // 'courseGoal' e 'vueLink' são propriedades que armazenam o estado da aplicação
       courseGoal: 'Finish the course and learn Vue!',
       vueLink: 'https://vuejs.org/',
     }
   },
-  // permite definir funções que serão executadas a partir de eventos
+  // Definição de métodos da aplicação (funções que podem ser chamadas no template)
   methods: {
     outputGoal() {
       const randomNumber = Math.random();
@@ -21,6 +21,6 @@ const app = Vue.createApp({
     }
   }
 });
-// Define o template da aplicação (parte HTML que será controlada pelo Vue)
-app.mount('#user-goal');
 
+// Monta a instância do Vue na DOM, conectando o Vue ao elemento HTML com o ID 'user-goal'
+app.mount('#user-goal');

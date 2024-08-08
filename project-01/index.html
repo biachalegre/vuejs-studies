@@ -18,10 +18,10 @@
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
-      <!-- Interpolação (entre tags html) -->
+      <!-- Uso de interpolação para exibir o valor retornado pelo método outputGoal -->
       <!-- <p>{{courseGoal}}</p> -->
       <p>{{outputGoal()}}</p>
-      <!-- v-bind: settar valor dentro de tag html como um atributo -->
+      <!-- Uso de v-bind para associar dinamicamente o valor da propriedade vueLink ao atributo href -->
       <p>Learn more <a v-bind:href="vueLink">about Vue</a></p>
     </section>
   </body>
