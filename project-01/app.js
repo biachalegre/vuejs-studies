@@ -5,7 +5,9 @@ const app = Vue.createApp({
     // Retorna um objeto que contém os dados que podem ser usados no template
     return {
       // 'courseGoal' e 'vueLink' são propriedades que armazenam o estado da aplicação
-      courseGoal: 'Finish the course and learn Vue!',
+      courseGoalA: 'Finish the course and learn Vue!',
+      courseGoalB: 'Master Vue and build amazing apps!',
+      // courseGoalB: '<h2 style="color:black">Master Vue and build amazing apps!</h2>',
       vueLink: 'https://vuejs.org/',
     }
   },
@@ -14,9 +16,11 @@ const app = Vue.createApp({
     outputGoal() {
       const randomNumber = Math.random();
       if (randomNumber < 0.5) {
-        return 'Learn Vue!';
+        // return 'Learn Vue!';
+        return this.courseGoalA // 'this' se refere ao objeto Vue (app) e acessa a propriedade 'courseGoalA' do objeto data 
       } else {
-        return 'Master Vue!';
+        // return 'Master Vue!';
+        return this.courseGoalB
       }
     }
   }
