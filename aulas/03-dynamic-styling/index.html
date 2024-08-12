@@ -27,21 +27,14 @@
         :class="selectedBoxA ? 'demo active' : 'demo'"
         @click="selectedBox('A')"
       ></div> -->
-      <div
+      <!-- <div
         class="demo"
         :class="{active: selectedBoxA}"
         @click="selectedBox('A')"
-      ></div>
-      <div
-        class="demo"
-        :class="{active: selectedBoxB}"
-        @click="selectedBox('B')"
-      ></div>
-      <div
-        class="demo"
-        :class="{active: selectedBoxC}"
-        @click="selectedBox('C')"
-      ></div>
+      ></div> -->
+      <div class="demo" :class="boxAClasses" @click="selectedBox('A')"></div>
+      <div class="demo" :class="boxBClasses" @click="selectedBox('B')"></div>
+      <div class="demo" :class="boxCClasses" @click="selectedBox('C')"></div>
     </section>
   </body>
 </html>
