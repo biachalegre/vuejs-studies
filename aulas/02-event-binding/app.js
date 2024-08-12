@@ -8,6 +8,7 @@ const app = Vue.createApp({
   },
   computed: {
     // computed properties são reativamente atualizadas, ou seja, sempre que uma propriedade que ela depende for atualizada, ela também será
+    // não é usado como funções (não são chamadas), mas como propriedades
     fullName() {
       if (this.name === '') {
         return '';
@@ -15,7 +16,7 @@ const app = Vue.createApp({
       return this.name + ' ' + 'Silva';
     }
   },
-
+  // apenas usar métodos se quiser recalcular um valor quando qualquer coisa na página mudar (a função é chamada sempre que a página é renderizada)
   methods: {
     resetInput() {
       this.name = '';
