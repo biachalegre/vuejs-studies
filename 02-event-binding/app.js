@@ -6,10 +6,23 @@ const app = Vue.createApp({
       confirmedName: '',
     };
   },
+  computed: {
+    // computed properties são reativamente atualizadas, ou seja, sempre que uma propriedade que ela depende for atualizada, ela também será
+    fullName() {
+      if (this.name === '') {
+        return '';
+      }
+      return this.name + ' ' + 'Silva';
+    }
+  },
+
   methods: {
-    confirmInput() {
-      this.confirmedName = this.name;
+    resetInput() {
+      this.name = '';
     },
+    // confirmInput() {
+    //   this.confirmedName = this.name;
+    // },
     addCounter(num) {
       this.counter = this.counter + num;
     },
