@@ -35,6 +35,8 @@ const app = Vue.createApp({
       }
     },
   },
+  // Computed => Calcular output value dinaminacamente
+  // Watchers => Executar código em resposta a mudanças de dados
   computed: {
     // computed properties são reativamente atualizadas, ou seja, sempre que uma propriedade que ela depende for atualizada, ela também será
     // não é usado como funções (não são chamadas), mas como propriedades

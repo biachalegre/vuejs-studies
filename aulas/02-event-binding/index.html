@@ -18,12 +18,14 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
+      <!-- Shortcut v-bind => v-bind:value="..." => :value="..." -->
       <!-- <button v-on:click="counter++">Add</button> -->
       <!-- <button v-on:click="addCounter()">Add</button> -->
-      <button v-on:click="addCounter(10)">Add</button>
+      <!-- <button v-on:click="addCounter(10)">Add</button> -->
+      <button @click="addCounter(10)">Add</button>
       <!-- <button v-on:click="counter--">Reduce</button> -->
       <!-- <button v-on:click="reduceCounter()">Reduce</button> -->
-      <button v-on:click="reduceCounter(5)">Reduce</button>
+      <button @reduceCounter(5)">Reduce</button>
       <!-- <button v-on:click.right="reduceCounter(5)">Reduce</button> -->
       <!-- <p v-once>Starting Counter: {{ counter }}</p> -->
       <p>Result: {{ counter }}</p>
