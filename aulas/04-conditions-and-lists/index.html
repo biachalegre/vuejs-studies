@@ -27,7 +27,7 @@
       <ul v-else="goals.length > 0">
         <!-- A diferença entre v-show e v-if é que o v-if realmente remove/adiciona elementos no DOM, já o v-show só muda o CSS (display: none) -->
         <!-- <ul v-show="goals.length > 0"> -->
-        <li>Goal</li>
+        <li v-for="goal in goals">{{ goal }}</li>
       </ul>
     </section>
   </body>
