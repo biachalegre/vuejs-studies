@@ -25,6 +25,8 @@
       </p>
       <!-- V-ELSE só pode ser usado em elementos que são diretamente posteriores ao elemento em que V-IF está sendo utilizado -->
       <ul v-else="goals.length > 0">
+        <!-- A diferença entre v-show e v-if é que o v-if realmente remove/adiciona elementos no DOM, já o v-show só muda o CSS (display: none) -->
+        <!-- <ul v-show="goals.length > 0"> -->
         <li>Goal</li>
       </ul>
     </section>
