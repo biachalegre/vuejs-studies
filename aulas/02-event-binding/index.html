@@ -25,15 +25,18 @@
       <!-- <button v-on:click="reduceCounter()">Reduce</button> -->
       <button v-on:click="reduceCounter(5)">Reduce</button>
       <!-- <button v-on:click.right="reduceCounter(5)">Reduce</button> -->
-      <p v-once>Starting Counter: {{ counter }}</p>
+      <!-- <p v-once>Starting Counter: {{ counter }}</p> -->
       <p>Result: {{ counter }}</p>
       <!-- A função é passada sem os parênteses, pois o browser passa o argumento do evento -->
       <!-- Data-Binding -->
-      <input type="text" v-model="name" v-on:keyup.enter="confirmInput()" />
+      <!-- <input type="text" v-model="name" v-on:keyup.enter="confirmInput()" /> -->
+      <input type="text" v-model="name" />
+      <input type="text" v-model="lastname" />
       <button v-on:click="resetInput">Reset Input</button>
       <!-- <input type="text" v-on:input="setName" v-on:keyup.enter="confirmInput" /> -->
       <!-- <input type="text" v-on:input="setName($event, 'Chalegre')" /> -->
       <!-- <p>Your Name: {{ confirmedName }}</p> -->
+      <!-- <p>Your Name: {{ fullName }}</p> -->
       <p>Your Name: {{ fullName }}</p>
       <!-- <form v-on:submit="submitForm"> -->
       <form v-on:submit.prevent="submitForm">
