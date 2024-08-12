@@ -18,13 +18,30 @@
     </header>
     <!-- Mudar a cor da div de acordo com o clique do usuário -->
     <section id="styling">
-      <div
+      <!-- <div
         class="demo"
         :style="{borderColor: selectedBoxA ? 'red' : '#ccc'}"
         @click="selectedBox('A')"
+      ></div> -->
+      <!-- <div
+        :class="selectedBoxA ? 'demo active' : 'demo'"
+        @click="selectedBox('A')"
+      ></div> -->
+      <div
+        class="demo"
+        :class="{active: selectedBoxA}"
+        @click="selectedBox('A')"
       ></div>
-      <div class="demo" @click="selectedBox('B')"></div>
-      <div class="demo" @click="selectedBox('C')"></div>
+      <div
+        class="demo"
+        :class="{active: selectedBoxB}"
+        @click="selectedBox('B')"
+      ></div>
+      <div
+        class="demo"
+        :class="{active: selectedBoxC}"
+        @click="selectedBox('C')"
+      ></div>
     </section>
   </body>
 </html>

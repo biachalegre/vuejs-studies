@@ -7,13 +7,22 @@ const app = Vue.createApp({
     }
   },
   methods: {
+    // selectedBox(box) {
+    //   if (box === 'A') {
+    //     this.selectedBoxA = true;
+    //   } else if (box === 'B') {
+    //     this.selectedBoxB = true;
+    //   } else if (box === 'C') {
+    //     this.selectedBoxC = true;
+    //   }
+    // },
     selectedBox(box) {
       if (box === 'A') {
-        this.selectedBoxA = true;
+        this.selectedBoxA = !this.selectedBoxA;
       } else if (box === 'B') {
-        this.selectedBoxB = true;
+        this.selectedBoxB = !this.selectedBoxB;
       } else if (box === 'C') {
-        this.selectedBoxC = true;
+        this.selectedBoxC = !this.selectedBoxC;
       }
     },
   }
